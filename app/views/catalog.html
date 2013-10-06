@@ -1,8 +1,15 @@
 <div class="row catalog" ng-controller="CatalogCtrl">
-  <div class="col-md-4">
-    <!-- catalog tree nav -->
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Browse Catalog</h4>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
   </div>
-  <div class="col-md-8 catalog-grid">
+  <div class="col-md-9 catalog-grid">
     <div class="row">
       <div class="col-md-3 catalog-item" ng-repeat="item in catalog">
         <img src="{{ item.imageUrl }}" />
