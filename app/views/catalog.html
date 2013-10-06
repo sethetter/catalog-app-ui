@@ -1,6 +1,12 @@
-<div class="row" ng-controller="CatalogCtrl">
+<div class="row catalog" ng-controller="CatalogCtrl">
   <div class="col-md-4">
+    <!-- catalog tree nav -->
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 catalog-grid">
+    <div class="row">
+      <div class="col-md-3 catalog-item" ng-repeat="item in catalog">
+        <img src="{{ item.imageUrl }}" />
+      </div>
+    </div>
   </div>
 </div>

@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: Catalog', function () {
+describe('Service: Catalogs', function () {
 
   // load the service's module
   beforeEach(module('catalogApp'));
 
   // instantiate service
-  var Catalog;
-  beforeEach(inject(function (_Catalog_) {
-    Catalog = _Catalog_;
+  var Catalogs;
+  beforeEach(inject(function (_Catalogs_) {
+    Catalogs = _Catalogs_;
   }));
 
   it('should do something', function () {
-    expect(!!Catalog).toBe(true);
+    expect(!!Catalogs).toBe(true);
   });
 
 });
