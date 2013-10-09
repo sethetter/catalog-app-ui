@@ -1,6 +1,10 @@
 {
   "name": "catalog",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sethetter/catalog-app-ui"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
