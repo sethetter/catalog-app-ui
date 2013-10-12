@@ -11,8 +11,8 @@
   </div>
   <div class="col-md-9 catalog-grid">
     <div class="row">
-      <div class="col-md-3 catalog-item" ng-repeat="item in catalog">
-        <img src="{{ item.imageUrl }}" />
+      <div class="col-md-3 catalog-item" ng-repeat="item in catalog.items">
+        <img ng-src="{{ item.imageUrl }}" />
       </div>
     </div>
   </div>
