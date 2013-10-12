@@ -10,7 +10,7 @@ describe( 'Service: Catalogs', function( ) {
   var Session;
   var httpBackend;
 
-  beforeEach( inject( function( $httpBackend, _Catalogs_, _Session_ ) {
+  beforeEach( inject( function( $httpBackend, _Catalogs_ ) {
 
     httpBackend = $httpBackend;
 
@@ -32,24 +32,20 @@ describe( 'Service: Catalogs', function( ) {
     } );
 
     Catalogs = _Catalogs_;
-    Session = _Session_;
 
-    Session.user = {
-      defaultCatalog: 0
-    };
   } ) );
 
   afterEach( function( ) {
-    $httpBackend.verifyNoOutstandingExpectation( );
-    $httpBackend.verifyNoOutstandingRequest( );
+    httpBackend.verifyNoOutstandingExpectation( );
+    httpBackend.verifyNoOutstandingRequest( );
   } );
 
-  it( 'should return user default catalog with no find argument', function( ) {
-    var catalog = Catalogs.find( );
-    httpBackend.flush( );
+  it( 'should return the specified catalog', function( ) {
+    var catalog = Catalogs.find( 0 ).then( function ( catalog ) {
+      expect( catalog.name ).toBe( "Testing Catalog" );
+    } );
 
-    // Does this need to be in a success callback for find? Or a promise?
-    expect( catalog.name ).toBe( "Testing Catalog" );
+    httpBackend.flush( );
   } );
 
 } );

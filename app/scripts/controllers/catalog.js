@@ -6,7 +6,11 @@ angular.module( 'catalogApp' )
 
     //if (!Session.user) $location.path('/login');
 
-    $scope.catalog = Catalogs.find( );
+    Catalogs.find( Session.user.defaultCatalog ).then( function( catalog ) {
+
+      $scope.catalog = catalog;
+
+    } );
 
   }
 ] );
