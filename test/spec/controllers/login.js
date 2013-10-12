@@ -1,19 +1,19 @@
 'use strict';
 
-describe('Controller: LoginCtrl', function () {
+describe( 'Controller: LoginCtrl', function( ) {
 
   // load the controller's module
-  beforeEach(module('catalogApp'));
+  beforeEach( module( 'catalogApp' ) );
 
   var LoginCtrl,
     scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    LoginCtrl = $controller('LoginCtrl', {
+  beforeEach( inject( function( $controller, $rootScope ) {
+    scope = $rootScope.$new( );
+    LoginCtrl = $controller( 'LoginCtrl', {
       $scope: scope
-    });
-  }));
+    } );
+  } ) );
 
-});
+} );
