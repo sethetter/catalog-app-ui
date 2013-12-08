@@ -5,7 +5,11 @@
         <h4 class="panel-title">Browse Catalog</h4>
       </div>
       <div class="panel-body">
-        Panel content
+        <ul id="tags">
+          <li ng-repeat="tag in tags">
+            <a href="/{{ catalog.stub }}/tag/{{ tag }}">{{ tag }}</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

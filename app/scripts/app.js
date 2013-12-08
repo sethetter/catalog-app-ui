@@ -15,6 +15,10 @@ angular.module( 'catalogApp', [ 'ui.bootstrap' ] )
     templateUrl: 'views/submit.html',
     controller: 'SubmitCtrl'
   } )
+  .when( '/:catalog/tag/:tag', {
+    templateUrl: '/views/catalogTag.html',
+    controller: 'CatalogTagCtrl'
+  } )
   .otherwise( {
     redirectTo: '/'
   } );
